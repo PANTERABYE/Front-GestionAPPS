@@ -1,0 +1,24 @@
+<!-- table.page.html -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Listado de Solicitudes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>NUAE</ion-label>
+      <ion-label>Fecha</ion-label>
+      <ion-label>Descargar</ion-label>
+    </ion-list-header>
+
+    <ion-item *ngFor="let solicitud of solicitudes">
+      <ion-label>{{ solicitud.nuae }}</ion-label>
+      <ion-label>{{ solicitud.fecha }}</ion-label>
+      <ion-button fill="outline" slot="end">Descargar</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="primary">Regresar al panel de administrador</ion-button>
+</ion-content>
